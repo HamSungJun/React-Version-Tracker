@@ -8,3 +8,4 @@
 ## Contents
 
 - [Why-Super(props)-in-Constructor](./Why-Super(props)-in-Constructor.md)
+- [Why-React-Component-Bind-Handler](./Why-React-Component-Bind-Handler.md)
