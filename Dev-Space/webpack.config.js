@@ -61,7 +61,7 @@ module.exports = {
 
         new webpack.DefinePlugin({
             AUTHOR : JSON.stringify(`HSJPRIME`),
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'process.env.NODE_ENV': JSON.stringify(`development`),
 
         }),
 

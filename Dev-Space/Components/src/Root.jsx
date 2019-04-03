@@ -1,39 +1,11 @@
-import React from 'react'
+import React , { useState , useEffect } from 'react'
 import ReactDOM from 'react-dom'
-
-import Lev_1 from './Lev_1.jsx'
-
-import { Provider } from '../../Context/Context.js'
 
 class Root extends React.Component{
 
     constructor(props){
 
         super(props)
-
-        this.state = {
-
-            user : {
-                email : "",
-                username : ""
-            }
-
-        }
-
-    }
-
-    componentDidMount() {
-
-        fetch(`https://jsonplaceholder.typicode.com/users?id=1`)
-            .then(response => (response.json()))
-            .then(Jres => (
-                this.setState({
-                    user : {
-                        email : Jres[0]["email"],
-                        username : Jres[0]["username"]
-                    }
-                })
-            ))
 
     }
 
@@ -42,9 +14,7 @@ class Root extends React.Component{
         return (
 
             <div>
-                <Provider value={this.state} >
-                    <Lev_1 />
-                </Provider>
+
             </div>
 
         )
@@ -53,4 +23,25 @@ class Root extends React.Component{
 
 }
 
-ReactDOM.render(<Root /> , document.getElementById('root'))
+const Counter = () => {
+
+    const [count,setCount] = useState(0)
+
+    useEffect(()=>{
+        document.title = `You Clicked ${count} Times.`
+    })
+
+    return (
+
+        <div>
+            <p>use click {count} times.</p>
+            <button onClick={()=>{setCount(count + 1)}}>
+                click me
+            </button>
+        </div>
+
+    )
+
+}
+
+ReactDOM.render(<Counter /> , document.getElementById('root'))
