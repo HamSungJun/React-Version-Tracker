@@ -185,7 +185,7 @@ class AngryPerson extends Person{
 
 ### 참고문헌
 
-- Super 키워드(https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/super)
-- React ES6 super(props)(https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9)
+- [Super 키워드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/super)
+- [React ES6 super(props)](https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9)
 
 
