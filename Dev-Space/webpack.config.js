@@ -47,17 +47,17 @@ module.exports = {
 
         new webpack.NamedModulesPlugin(),
 
-        new CompressionPlugin({
-
-            filename: '[path].br[query]',
-            algorithm: 'brotliCompress',
-            test: /\.(js|css|html|svg|png|jpg|jpeg|gif)$/,
-            compressionOptions: { level: 11 },
-            threshold: 8192,
-            minRatio: 0.8,
-            deleteOriginalAssets: false
-
-        }),
+        // new CompressionPlugin({
+        //
+        //     filename: '[path].br[query]',
+        //     algorithm: 'brotliCompress',
+        //     test: /\.(js|css|html|svg|png|jpg|jpeg|gif)$/,
+        //     compressionOptions: { level: 11 },
+        //     threshold: 8192,
+        //     minRatio: 0.8,
+        //     deleteOriginalAssets: false
+        //
+        // }),
 
         new webpack.DefinePlugin({
             AUTHOR : JSON.stringify(`HSJPRIME`),

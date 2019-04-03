@@ -1,14 +1,39 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Lev_1 from './Lev_1.jsx'
+
+import { Provider } from '../../Context/Context.js'
+
 class Root extends React.Component{
 
-    constructor(){
-        super()
+    constructor(props){
 
-        if ( AUTHOR === `HSJPRIME`){
-            console.log(`Made By HSJPRIME`)
+        super(props)
+
+        this.state = {
+
+            user : {
+                email : "",
+                username : ""
+            }
+
         }
+
+    }
+
+    componentDidMount() {
+
+        fetch(`https://jsonplaceholder.typicode.com/users?id=1`)
+            .then(response => (response.json()))
+            .then(Jres => (
+                this.setState({
+                    user : {
+                        email : Jres[0]["email"],
+                        username : Jres[0]["username"]
+                    }
+                })
+            ))
 
     }
 
@@ -17,7 +42,9 @@ class Root extends React.Component{
         return (
 
             <div>
-                <h1>{`Hellooo` + AUTHOR}</h1>
+                <Provider value={this.state} >
+                    <Lev_1 />
+                </Provider>
             </div>
 
         )
