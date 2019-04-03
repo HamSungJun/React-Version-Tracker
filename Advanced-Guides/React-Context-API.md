@@ -197,3 +197,4 @@ export { Provider , Consumer}
 활용하는 것도 괜찮아 보인다.
 
 하지만 `Source of Truth`관점을 조금 무너뜨리는 느낌이라 여전히 Redux를 활용 할 것 같다.
+

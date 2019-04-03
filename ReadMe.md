@@ -15,3 +15,5 @@
 #### Advanced Guides
 
 - [React-Context-API](Advanced-Guides/React-Context-API.md)
+- [React-Fragments](Advanced-Guides/React-Fragments.md)
+- [React-Hooks](Advanced-Guides/React-Hooks.md)
